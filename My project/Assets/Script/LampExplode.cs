@@ -9,17 +9,24 @@ public class LampExplode : MonoBehaviour
     [SerializeField] private Sprite mainSpi;
     [SerializeField] private Sprite explodeSpi;
     public GameObject light;
+    private Animator anim;
+    [SerializeField] private float endTime;
+    [SerializeField] private float endtime2;
 
     void Start()
     {
         spi = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        endtime2 -= Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.A))
         {
+            anim.SetTrigger("isGlitch");
             isExplode = true;
+            
         }
 
         Explode();
@@ -29,8 +36,8 @@ public class LampExplode : MonoBehaviour
     {
         if (isExplode == true)
         {
-            spi.sprite = explodeSpi;
-            light.SetActive(false);
+            StartCoroutine(Glitcher());
+            
         }
     }
 
@@ -40,6 +47,7 @@ public class LampExplode : MonoBehaviour
         {
             if (collision.CompareTag("UIitem"))
             {
+                StopAllCoroutines();
                 if (InvntoryManager.instance.getBulb == true)
                 {
                     spi.sprite = mainSpi;
@@ -49,5 +57,12 @@ public class LampExplode : MonoBehaviour
                 }
             }
         } 
+    }
+
+    private IEnumerator Glitcher()
+    {
+        yield return new WaitForSeconds(endTime);
+        spi.sprite = explodeSpi;
+        light.SetActive(false);
     }
 }

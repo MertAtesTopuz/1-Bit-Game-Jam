@@ -1094,7 +1094,8 @@ GameObject:
   - component: {fileID: 635713040}
   - component: {fileID: 635713039}
   - component: {fileID: 635713038}
-  - component: {fileID: 635713037}
+  - component: {fileID: 635713041}
+  - component: {fileID: 635713042}
   m_Layer: 6
   m_Name: candel_3
   m_TagString: Untagged
@@ -1102,22 +1103,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &635713037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635713036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 984b9b51e0dec437db611c2a93b3d1b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isBurn: 0
-  mainSpi: {fileID: -639260743, guid: 54e117af72c244a2ab4087c752796ca1, type: 3}
-  BurnSpi: {fileID: -33370046, guid: 54e117af72c244a2ab4087c752796ca1, type: 3}
-  light: {fileID: 1183235292}
 --- !u!61 &635713038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1212,6 +1197,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &635713041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635713036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25894d6af89864857ac0d834593d754b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBurn: 0
+  mainSpi: {fileID: -639260743, guid: 54e117af72c244a2ab4087c752796ca1, type: 3}
+  burnSpi: {fileID: -33370046, guid: 54e117af72c244a2ab4087c752796ca1, type: 3}
+  light: {fileID: 1183235292}
+--- !u!95 &635713042
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635713036}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 627e32b46ab9741d1acbeecc6e8ea859, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &658858845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2818190098543495000, guid: 964c6b994827f4ea0aac219d7ed4d7c3, type: 3}
@@ -2009,13 +2030,14 @@ GameObject:
   - component: {fileID: 1328206470}
   - component: {fileID: 1328206473}
   - component: {fileID: 1328206474}
+  - component: {fileID: 1328206475}
   m_Layer: 6
   m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1328206470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2126,6 +2148,28 @@ MonoBehaviour:
   mainSpi: {fileID: 815645902, guid: ee2a4a24b0c5b47ef85706c1a5ca4cfb, type: 3}
   explodeSpi: {fileID: -850088631, guid: ee2a4a24b0c5b47ef85706c1a5ca4cfb, type: 3}
   light: {fileID: 23007266}
+  endTime: 1.5
+  endtime2: 0
+--- !u!95 &1328206475
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328206469}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e9b9454a7017340aeb775f98e58c01b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1373852163
 PrefabInstance:
   m_ObjectHideFlags: 0
