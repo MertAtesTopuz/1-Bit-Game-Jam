@@ -17,4 +17,4 @@ MonoBehaviour:
   id: 0
   range: {x: 5, y: 4}
   stackable: 1
-  image: {fileID: 21300000, guid: caec2f1656e2a47c1bcd66e953559b96, type: 3}
+  image: {fileID: 911727810, guid: 5849426d9762d4b3db2c02a07d64c8a7, type: 3}

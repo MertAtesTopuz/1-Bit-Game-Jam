@@ -11,6 +11,8 @@ public class InvntoryManager : MonoBehaviour
     public GameObject inventoryItemPrefab;
     public bool getBulb;
     public bool destroyBulb;
+    public bool getMatch;
+    public bool destroyMatch;
 
     int selectedSlot = -1;
 

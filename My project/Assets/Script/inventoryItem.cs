@@ -53,9 +53,13 @@ public class inventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         transform.SetParent(transform.root);
         col.enabled = true;
         transform.SetAsLastSibling();
-        if (image.sprite.name == "Bulb")
+        if (image.sprite.name == "lamb2 1_0")
         {
             InvntoryManager.instance.getBulb = true;
+        }
+        if (image.sprite.name == "MatchBox_0")
+        {
+            InvntoryManager.instance.getMatch = true;
         }
     }
 
@@ -75,6 +79,12 @@ public class inventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             InvntoryManager.instance.GetSelectedItem(true);
             InvntoryManager.instance.destroyBulb = false;
+        }
+
+        if (InvntoryManager.instance.destroyMatch == true)
+        {
+            InvntoryManager.instance.GetSelectedItem(true);
+            InvntoryManager.instance.destroyMatch = false;
         }
     }
 }
