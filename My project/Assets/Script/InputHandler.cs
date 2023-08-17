@@ -40,12 +40,37 @@ public class InputHandler : MonoBehaviour
         }
 
         InventorySlot slot = rayHit.collider.GetComponent<InventorySlot>();
+        
 
         if (slot != null)
         {
             int selectedNum = System.Array.IndexOf(InvntoryManager.instance.inventorySlots, slot);
-            InvntoryManager.instance.ChangeSelectedSlot(selectedNum);   
-        }
+            InvntoryManager.instance.ChangeSelectedSlot(selectedNum);
 
+            inventoryItem itemInSlot = slot.GetComponentInChildren<inventoryItem>();
+
+            if (itemInSlot != null)
+            {
+                if (InvntoryManager.instance.flashlightSelected == true)
+                {
+                    if (itemInSlot.image.sprite.name == "Batery_0")
+                    {
+                        InvntoryManager.instance.batterySelected = true;
+                    }
+                    else
+                    {
+                        InvntoryManager.instance.batterySelected = false;
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 }

@@ -62,7 +62,7 @@ public class inventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             InvntoryManager.instance.getMatch = true;
         }
     }
-
+    
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = worldPos;
@@ -79,6 +79,12 @@ public class inventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             InvntoryManager.instance.GetSelectedItem(true);
             InvntoryManager.instance.destroyBulb = false;
+        }
+
+        if (InvntoryManager.instance.destroyBattery == true)
+        {
+            InvntoryManager.instance.GetSelectedItem(true);
+            InvntoryManager.instance.destroyBattery = false;
         }
 
         if (InvntoryManager.instance.destroyMatch == true)

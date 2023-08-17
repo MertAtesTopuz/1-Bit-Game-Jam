@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9f85d2774916c46eb88d9f0fc32c47b3
+guid: c544d257ca9514b75b9b5e98b7463197
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lantern 2_0
+      name: Batery_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 7
-        width: 18
-        height: 18
+        x: 4
+        y: 4
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46fa5094510c54ea5bd70cd80c99c793
-      internalID: -210472680
+      spriteID: 4bec1f03e77e8466093a010d40aec370
+      internalID: -1488645346
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Lantern 2_0: -210472680
+      Batery_0: 1668262118
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

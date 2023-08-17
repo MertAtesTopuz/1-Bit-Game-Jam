@@ -47,11 +47,11 @@ TagManager:
   - name: Wall
     uniqueID: 4006575251
     locked: 0
-  - name: Player
-    uniqueID: 403912967
-    locked: 0
   - name: Environment
     uniqueID: 2352317451
+    locked: 0
+  - name: Player
+    uniqueID: 403912967
     locked: 0
   - name: Default
     uniqueID: 0

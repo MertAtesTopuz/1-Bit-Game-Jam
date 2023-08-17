@@ -8,11 +8,17 @@ public class InvntoryManager : MonoBehaviour
 
     public int maxStackedItem = 10;
     public InventorySlot[] inventorySlots;
+    public bool usableSlot;
     public GameObject inventoryItemPrefab;
     public bool getBulb;
     public bool destroyBulb;
     public bool getMatch;
     public bool destroyMatch;
+    public bool flashlightSelected;
+    public bool otherSlots;
+    public bool batterySelected;
+    public bool destroyBattery;
+    public bool flashlightSelected2;
 
     int selectedSlot = -1;
 
@@ -28,7 +34,14 @@ public class InvntoryManager : MonoBehaviour
 
     private void Update()
     {
-      
+        if (flashlightSelected2 == true && usableSlot == true)
+        {
+            flashlightSelected = true;
+        }
+        else
+        {
+            flashlightSelected = false;
+        }
     }
 
     public void ChangeSelectedSlot(int newValue)
@@ -40,6 +53,7 @@ public class InvntoryManager : MonoBehaviour
 
         inventorySlots[newValue].Select();
         selectedSlot = newValue;
+
     }
 
     public bool AddItem(Item item)
