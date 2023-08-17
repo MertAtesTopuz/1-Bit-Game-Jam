@@ -303,9 +303,8 @@ MonoBehaviour:
   isExplode: 0
   mainSpi: {fileID: 815645902, guid: ee2a4a24b0c5b47ef85706c1a5ca4cfb, type: 3}
   explodeSpi: {fileID: -850088631, guid: ee2a4a24b0c5b47ef85706c1a5ca4cfb, type: 3}
-  light: {fileID: 8984191646050970955}
+  mainLight: {fileID: 8984191646050970955}
   endTime: 1.5
-  endtime2: 0
 --- !u!95 &8984191647085735906
 Animator:
   serializedVersion: 4

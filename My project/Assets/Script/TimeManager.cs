@@ -68,7 +68,7 @@ public class TimeManager : MonoBehaviour
 
    private void ChangeSprite()
     {
-        if (Hour == 10 && Minute == 10)
+        if (Hour == 10 && Minute == 5)
         {
             img.sprite = night;
             txtPro.color = nightColor;
@@ -83,6 +83,7 @@ public class TimeManager : MonoBehaviour
             if (mainLight.intensity <= 0.05f)
             {
                 mainLight.intensity = 0.05f;
+                MonsterAi.ai.isNight = true;
             }
     }
 }

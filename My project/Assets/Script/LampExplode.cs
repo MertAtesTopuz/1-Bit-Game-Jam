@@ -8,10 +8,9 @@ public class LampExplode : MonoBehaviour
     private SpriteRenderer spi;
     [SerializeField] private Sprite mainSpi;
     [SerializeField] private Sprite explodeSpi;
-    public GameObject light;
+    public GameObject mainLight;
     private Animator anim;
     [SerializeField] private float endTime;
-    [SerializeField] private float endtime2;
 
     void Start()
     {
@@ -21,8 +20,7 @@ public class LampExplode : MonoBehaviour
 
     void Update()
     {
-        endtime2 -= Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.A))
+        if (MonsterAi.ai.lightBreak == true)
         {
             anim.SetTrigger("isGlitch");
             isExplode = true;
@@ -52,7 +50,7 @@ public class LampExplode : MonoBehaviour
                 {
                     spi.sprite = mainSpi;
                     isExplode = false;
-                    light.SetActive(true);
+                    mainLight.SetActive(true);
                     InvntoryManager.instance.destroyBulb = true;
                 }
             }
@@ -63,6 +61,7 @@ public class LampExplode : MonoBehaviour
     {
         yield return new WaitForSeconds(endTime);
         spi.sprite = explodeSpi;
-        light.SetActive(false);
+        mainLight.SetActive(false);
+        MonsterAi.ai.lightBreak = false;
     }
 }

@@ -1264,6 +1264,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2818190098543495000, guid: 1bd83a7dc751a4182b607e6a3931f4b5, type: 3}
   m_PrefabInstance: {fileID: 1373852163}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &693550568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 693550570}
+  - component: {fileID: 693550569}
+  m_Layer: 0
+  m_Name: Monster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &693550569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693550568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e8af0539f2847eca35ea4a28051fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightBreak: 0
+  candleBreak: 0
+  isNight: 0
+  startWait: 15
+--- !u!4 &693550570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693550568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.0726557, y: -6.658965, z: -0.09846483}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &722609191
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,6 +2622,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2818190098543495000, guid: 1bd83a7dc751a4182b607e6a3931f4b5, type: 3}
   m_PrefabInstance: {fileID: 1968671197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1285531887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8984191646050970955, guid: 8ac298de021eb4ed2bca39e001cbefc2, type: 3}
+  m_PrefabInstance: {fileID: 8984191646064803177}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1306196731
 PrefabInstance:
@@ -5130,6 +5183,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 551722383}
     m_Modifications:
+    - target: {fileID: 8984191647085735907, guid: 8ac298de021eb4ed2bca39e001cbefc2, type: 3}
+      propertyPath: mainLight
+      value: 
+      objectReference: {fileID: 1285531887}
     - target: {fileID: 8984191647085735916, guid: 8ac298de021eb4ed2bca39e001cbefc2, type: 3}
       propertyPath: m_Name
       value: Lamp
