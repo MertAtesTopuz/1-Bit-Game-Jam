@@ -8,13 +8,13 @@ public class PnCController : MonoBehaviour
     [SerializeField] private float speed;
     //[SerializeField] private float perspectiveScale;
     //[SerializeField] private float scaleRatio;
-    //private Animator anim;
-    //private Vector2 stuckDistanceCheck;
+    private Animator anim;
+    private Vector2 stuckDistanceCheck;
 
     void Start()
     {
         followSpot = transform.position;
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -26,7 +26,7 @@ public class PnCController : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, followSpot, speed * Time.deltaTime);
         // Perspective();
-        // UpdateAnimation();
+        UpdateAnimation();
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -42,6 +42,7 @@ public class PnCController : MonoBehaviour
         scale.y = perspectiveScale = (scaleRatio - transform.position.y);
         transform.localScale = scale;
     }
+    */
 
     private void UpdateAnimation()
     {
@@ -60,5 +61,5 @@ public class PnCController : MonoBehaviour
             stuckDistanceCheck = transform.position;
         }
     }
-    */
+    
 }
