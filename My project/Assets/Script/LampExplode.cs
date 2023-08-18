@@ -10,12 +10,14 @@ public class LampExplode : MonoBehaviour
     [SerializeField] private Sprite explodeSpi;
     public GameObject mainLight;
     private Animator anim;
+    private Animator chaAnim;
     [SerializeField] private float endTime;
 
     void Start()
     {
         spi = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        chaAnim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     void Update()
@@ -48,6 +50,7 @@ public class LampExplode : MonoBehaviour
                 StopAllCoroutines();
                 if (InvntoryManager.instance.getBulb == true)
                 {
+                    chaAnim.SetTrigger("isRoll");
                     spi.sprite = mainSpi;
                     isExplode = false;
                     mainLight.SetActive(true);

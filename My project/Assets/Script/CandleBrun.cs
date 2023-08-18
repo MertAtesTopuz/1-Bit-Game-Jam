@@ -20,7 +20,7 @@ public class CandleBrun : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.B))
+        if(MonsterAi.ai.candleBreak == true)
         {
             isBurn = false;
         }
@@ -35,6 +35,7 @@ public class CandleBrun : MonoBehaviour
             spi.sprite = mainSpi;
             light.SetActive(false);
             anim.SetBool("isBurn", false);
+            MonsterAi.ai.candleBreak = false;
         }
     }
 
