@@ -25,7 +25,6 @@ public class MonsterAi : MonoBehaviour
 
     public bool saver = true;
 
-
     private void Awake()
     {
         ai = this;
@@ -57,6 +56,7 @@ public class MonsterAi : MonoBehaviour
 
             if (saver == false)
             {
+                
                 StartCoroutine(KillPlayer());
             }
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class LampExplode : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class LampExplode : MonoBehaviour
     private Animator anim;
     private Animator chaAnim;
     [SerializeField] private float endTime;
+
+    [SerializeField] private AudioSource audioS;
+    [SerializeField] private AudioSource audioS2;
 
     void Start()
     {
@@ -26,7 +30,7 @@ public class LampExplode : MonoBehaviour
         {
             anim.SetTrigger("isGlitch");
             isExplode = true;
-            
+            audioS.Play();
         }
 
         Explode();
@@ -37,7 +41,6 @@ public class LampExplode : MonoBehaviour
         if (isExplode == true)
         {
             StartCoroutine(Glitcher());
-            
         }
     }
 
@@ -54,6 +57,7 @@ public class LampExplode : MonoBehaviour
                     spi.sprite = mainSpi;
                     isExplode = false;
                     mainLight.SetActive(true);
+                    audioS2.Play();
                     InvntoryManager.instance.destroyBulb = true;
                 }
             }

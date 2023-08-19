@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PnCController : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PnCController : MonoBehaviour
     //[SerializeField] private float scaleRatio;
     private Animator anim;
     private Vector2 stuckDistanceCheck;
+    public AudioSource walk1;
+    public AudioSource walk2;
 
     void Start()
     {
@@ -61,5 +64,14 @@ public class PnCController : MonoBehaviour
             stuckDistanceCheck = transform.position;
         }
     }
-    
+
+    public void WalkSound1()
+    {
+        walk1.Play();
+    }
+
+    public void WalkSound2()
+    {
+        walk2.Play();
+    }
 }
