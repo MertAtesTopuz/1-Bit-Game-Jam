@@ -28,6 +28,8 @@ public class TimeManager : MonoBehaviour
     public Color dayColor;
     public Color nightColor;
 
+    public bool windowChange;
+
     void Start()
     {
         img.sprite = day;
@@ -73,7 +75,7 @@ public class TimeManager : MonoBehaviour
             img.sprite = night;
             txtPro.color = nightColor;
             lightTimer = true;
-            
+            windowChange = true;
         }
     }
     private void LightUpdater()
