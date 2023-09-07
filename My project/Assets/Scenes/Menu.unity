@@ -1213,7 +1213,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 21350e81df0f643308eda94e1e20218f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 18d9806942e26404d8f297d553d4bc12, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -1483,8 +1483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.6, y: -264.08}
-  m_SizeDelta: {x: 710.9, y: 540.87}
+  m_AnchoredPosition: {x: 60, y: -258.9}
+  m_SizeDelta: {x: 1015, y: 540.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &910005790
 MonoBehaviour:
@@ -1506,7 +1506,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Name
+  m_text: "Right Mouse Button  -  Move\nLeft Mouse Button - Collect\nOpen Lamp -
+    Drag and drop the lightbulb to lamp\nBurn Candle - Drag and drop the match box
+    to candle\nRelode Flashlight - Drag and drop the battery to flashlight\n\n\u0130f
+    you want to use flashlight, you need to drag and drop single inventory slot that
+    next to main inventory\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b3f98fd1795440c5aba2824d7ca8048, type: 2}
   m_sharedMaterial: {fileID: -5847724065935028927, guid: 4b3f98fd1795440c5aba2824d7ca8048, type: 2}
@@ -1659,7 +1663,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 34.3, y: 75.2}
-  m_SizeDelta: {x: 671.3, y: 50}
+  m_SizeDelta: {x: 1194, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163530942
 MonoBehaviour:
@@ -1681,7 +1685,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Name
+  m_text: Against The Darknes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b3f98fd1795440c5aba2824d7ca8048, type: 2}
   m_sharedMaterial: {fileID: -5847724065935028927, guid: 4b3f98fd1795440c5aba2824d7ca8048, type: 2}
@@ -1708,8 +1712,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 102.1
-  m_fontSizeBase: 102.1
+  m_fontSize: 102.09
+  m_fontSizeBase: 102.09
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1783,7 +1787,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229440881}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1793,8 +1797,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.6, y: -264.08}
-  m_SizeDelta: {x: 710.9, y: 540.87}
+  m_AnchoredPosition: {x: 60, y: -258.9}
+  m_SizeDelta: {x: 1015, y: 540.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229440883
 MonoBehaviour:
@@ -1816,7 +1820,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Name
+  m_text: "Muhammet Enes Bostan - Game Designer, 2D Artist\n\nMert (Mergen) Ate\u015F
+    Topuz - Game Designer, Game Developer"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b3f98fd1795440c5aba2824d7ca8048, type: 2}
   m_sharedMaterial: {fileID: -5847724065935028927, guid: 4b3f98fd1795440c5aba2824d7ca8048, type: 2}
@@ -2197,8 +2202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.3, y: 75.2}
-  m_SizeDelta: {x: 671.3, y: 50}
+  m_AnchoredPosition: {x: 34.3, y: 102}
+  m_SizeDelta: {x: 1200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1648256848
 MonoBehaviour:
@@ -2220,7 +2225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Name
+  m_text: Against The Darknes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b3f98fd1795440c5aba2824d7ca8048, type: 2}
   m_sharedMaterial: {fileID: -5847724065935028927, guid: 4b3f98fd1795440c5aba2824d7ca8048, type: 2}
@@ -2466,8 +2471,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.3, y: 75.2}
-  m_SizeDelta: {x: 671.3, y: 50}
+  m_AnchoredPosition: {x: 34.3, y: 105.5}
+  m_SizeDelta: {x: 1200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713631468
 MonoBehaviour:
@@ -2489,7 +2494,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Name
+  m_text: Against The Darknes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b3f98fd1795440c5aba2824d7ca8048, type: 2}
   m_sharedMaterial: {fileID: -5847724065935028927, guid: 4b3f98fd1795440c5aba2824d7ca8048, type: 2}

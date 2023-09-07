@@ -53,7 +53,7 @@ public class MenuController : MonoBehaviour
     {
         anim.SetTrigger("isMTP");
         yield return new WaitForSeconds(1.1f);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private IEnumerator TimerMTS()

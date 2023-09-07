@@ -24,6 +24,9 @@ public class MonsterAi : MonoBehaviour
     public float candleTimeSetter = 3;
 
     public bool saver = true;
+    public bool saver2 = true;
+
+    private PnlControl pnl;
 
     private void Awake()
     {
@@ -32,6 +35,7 @@ public class MonsterAi : MonoBehaviour
 
     private void Start()
     {
+        pnl = GameObject.FindGameObjectWithTag("PnlControl").GetComponent<PnlControl>();
         StartCoroutine(RandomTimeSelector());
     }
 
@@ -41,7 +45,7 @@ public class MonsterAi : MonoBehaviour
         candleTimer -= Time.deltaTime;
         if (isNight == true)
         {
-            randomTime = Random.Range(10f, 20f);
+            randomTime = Random.Range(5f, 10f);
 
             if (value == 0)
             {
@@ -54,14 +58,14 @@ public class MonsterAi : MonoBehaviour
                 candleTimer = candleTimeSetter;
             }
 
-            if (saver == false)
+            if (saver == false && saver2 == false)
             {
                 
                 StartCoroutine(KillPlayer());
             }
         }
 
-        if (saver == true)
+        if (saver == true || saver2 == true)
         {
             StopCoroutine(KillPlayer());
         }
@@ -121,10 +125,10 @@ public class MonsterAi : MonoBehaviour
 
     private IEnumerator KillPlayer()
     {
-        yield return new WaitForSeconds(10f);
-        if (saver == false)
+        yield return new WaitForSeconds(5f);
+        if (saver == false && saver2 == false)
         {
-            Time.timeScale = 0;
+            pnl.kaybettin();
         }
     }
 }

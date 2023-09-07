@@ -18,6 +18,8 @@ public class TimeManager : MonoBehaviour
     public Light2D mainLight;
     private bool lightTimer;
 
+    public bool winBool;
+
     [Header("UI")]
     public Image img;
     public TextMeshProUGUI txtPro;
@@ -35,8 +37,8 @@ public class TimeManager : MonoBehaviour
         img.sprite = day;
         txtPro.color = dayColor;
 
-        Minute = 0;
-        Hour = 10;
+        Minute = 30;
+        Hour = 20;
         timer = minuteToRealTime;
     }
 
@@ -70,7 +72,7 @@ public class TimeManager : MonoBehaviour
 
    private void ChangeSprite()
     {
-        if (Hour == 10 && Minute == 5)
+        if (Hour == 21 && Minute == 0)
         {
             img.sprite = night;
             txtPro.color = nightColor;
@@ -78,6 +80,15 @@ public class TimeManager : MonoBehaviour
             windowChange = true;
         }
     }
+
+    private void Win()
+    {
+        if (Hour == 23 && Minute == 0)
+        {
+            winBool = true;
+        }
+    }
+
     private void LightUpdater()
     {
             mainLight.intensity -= 0.1f;

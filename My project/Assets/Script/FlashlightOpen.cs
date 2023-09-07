@@ -23,25 +23,27 @@ public class FlashlightOpen : MonoBehaviour
         {
            flashlight.SetActive(true);
            flashlightSlider.SetActive(true);
-            MonsterAi.ai.saver = true;
+           
         }
         else if (InvntoryManager.instance.flashlightSelected == false)
         {
            flashlight.SetActive(false);
            flashlightSlider.SetActive(false);
-            MonsterAi.ai.saver = false;
+            MonsterAi.ai.saver2 = false;
         }
 
         if (flashlightSlider.activeSelf == true)
         {
-            slid.value -= Time.deltaTime / 100;
+            slid.value -= Time.deltaTime / 20;
             if (slid.value == 0f)
             {
                 mainLight.SetActive(false);
+                MonsterAi.ai.saver2 = false;
             }
             else
             {
                 mainLight.SetActive(true);
+                MonsterAi.ai.saver2 = true;
             }
         }
     }

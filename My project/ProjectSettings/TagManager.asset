@@ -8,6 +8,7 @@ TagManager:
   - item
   - Handler
   - Time
+  - PnlControl
   layers:
   - Default
   - TransparentFX

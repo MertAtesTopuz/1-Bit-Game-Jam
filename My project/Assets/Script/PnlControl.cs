@@ -6,7 +6,22 @@ using UnityEngine.SceneManagement;
 public class PnlControl : MonoBehaviour
 {
     public GameObject stopPnl;
+    public GameObject losePnl;
+    private TimeManager time;
     // [System.Obsolete]
+
+    private void Start()
+    {
+        time = GameObject.FindGameObjectWithTag("Time").GetComponent<TimeManager>();
+    }
+
+    private void Update()
+    {
+        if (time.winBool == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
 
     public void BackToMenuBtn()
     {
@@ -30,5 +45,11 @@ public class PnlControl : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void kaybettin()
+    {
+        Time.timeScale = 0.0f;
+        losePnl.SetActive(true);
     }
 }
